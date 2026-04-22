@@ -12,7 +12,7 @@ export default defineGkdApp({
         {
           key: 1,
           matches: [
-            '[vid="view_mach_content"] > * [text="开启消息通知"] < - > @[clickable=true]',
+            '[vid="view_mach_content"] > * [text="开启消息通知"] < FrameLayout - FrameLayout > @[clickable=true]',
           ],
           fastQuery: true,
           activityIds: [

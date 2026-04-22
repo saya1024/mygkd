@@ -11,7 +11,9 @@ export default defineGkdApp({
       rules: [
         {
           key: 1,
-          matches: ['[text="订阅感兴趣的通知"] +2 > @[text="暂不开启"]'],
+          matches: [
+            '[text="订阅感兴趣的通知"] +2 LinearLayout > @[text="暂不开启"]',
+          ],
           fastQuery: true,
           activityIds: [
             'com.bilibili.ship.theseus.detail.UnitedBizDetailsActivity',
@@ -31,7 +33,7 @@ export default defineGkdApp({
         {
           key: 1,
           matches: [
-            '[text="你喜欢视频的弹幕氛围吗？"] < - @[vid="close_layout"][clickable=true]',
+            '[text="你喜欢视频的弹幕氛围吗？"] < ViewGroup - @[vid="close_layout"][clickable=true]',
           ],
           fastQuery: true,
           activityIds: [
@@ -77,7 +79,9 @@ export default defineGkdApp({
       rules: [
         {
           key: 1,
-          matches: ['[text="打开推送通知"] +2 > @[text="暂不开启"]'],
+          matches: [
+            '[text="打开推送通知"] +2 LinearLayout > @[text="暂不开启"]',
+          ],
           fastQuery: true,
           activityIds: ['tv.danmaku.bili.MainActivityV2'],
           snapshotUrls: ['https://i.gkd.li/i/26983388'],

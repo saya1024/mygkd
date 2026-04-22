@@ -12,7 +12,7 @@ export default defineGkdApp({
         {
           key: 1,
           matches: [
-            '[text="选择通知接收范围"] +3 * > [text="暂时不用"][clickable=true]',
+            '[text="选择通知接收范围"] +3 LinearLayout > [text="暂时不用"][clickable=true]',
           ],
           fastQuery: true,
           activityIds: [
@@ -52,7 +52,7 @@ export default defineGkdApp({
         {
           key: 1,
           matches: [
-            '[text="关闭"] < [clickable=true] -2 < [text="支付宝推荐你"]',
+            '[text="关闭"] < @[clickable=true] -2 FrameLayout < [text="支付宝推荐你"]',
           ],
           fastQuery: true,
           activityIds: ['com.alipay.android.msp.ui.views.MspContainerActivity'],
