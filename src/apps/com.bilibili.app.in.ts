@@ -11,9 +11,7 @@ export default defineGkdApp({
       rules: [
         {
           key: 1,
-          matches: [
-            '[text="订阅感兴趣的通知"] +2 * > [text="暂不开启"][clickable=true]',
-          ],
+          matches: ['[text="订阅感兴趣的通知"] +2 > @[text="暂不开启"]'],
           fastQuery: true,
           activityIds: [
             'com.bilibili.ship.theseus.detail.UnitedBizDetailsActivity',
@@ -33,7 +31,7 @@ export default defineGkdApp({
         {
           key: 1,
           matches: [
-            '[text="你喜欢视频的弹幕氛围吗？"] < * - [vid="close_layout"][clickable=true]',
+            '[text="你喜欢视频的弹幕氛围吗？"] < - @[vid="close_layout"][clickable=true]',
           ],
           fastQuery: true,
           activityIds: [
@@ -47,6 +45,27 @@ export default defineGkdApp({
           exampleUrls: [
             'https://e.gkd.li/5d38f257-7af8-414e-9190-61adcc0d95f8',
             'https://e.gkd.li/49a9b49e-a830-4673-9566-13b0d610416e',
+          ],
+        },
+      ],
+    },
+    {
+      name: '[你喜欢视频的评论氛围吗？]弹窗',
+      key: 3,
+      enable: false,
+      rules: [
+        {
+          key: 1,
+          matches: [
+            '[vid="compose_view"] > * [text="你喜欢视频的评论氛围吗？"] + @[clickable=true]',
+          ],
+          fastQuery: true,
+          activityIds: [
+            'com.bilibili.ship.theseus.detail.UnitedBizDetailsActivity',
+          ],
+          snapshotUrls: ['https://i.gkd.li/i/26981484'],
+          exampleUrls: [
+            'https://e.gkd.li/23d65dd8-7ee4-4501-94f1-98a2b99ce9e2',
           ],
         },
       ],
