@@ -25,5 +25,43 @@ export default defineGkdApp({
         },
       ],
     },
+    {
+      name: '[开启通知权限]弹窗',
+      key: 2,
+      enable: false,
+      rules: [
+        {
+          key: 1,
+          matches: [
+            '@[desc="关闭"] * < [id="com.alipay.mobile.antui:id/tip_container"] > * [text="开启通知权限 不错过支付信息等重要通知"]',
+          ],
+          fastQuery: true,
+          activityIds: ['com.eg.android.AlipayGphone.AlipayLogin'],
+          snapshotUrls: ['https://i.gkd.li/i/26985172'],
+          exampleUrls: [
+            'https://e.gkd.li/7e1bed1b-1f65-4a80-891f-0fd15f7f4acd',
+          ],
+        },
+      ],
+    },
+    {
+      name: '[花呗先还后付]弹窗',
+      key: 3,
+      enable: false,
+      rules: [
+        {
+          key: 1,
+          matches: [
+            '[text="关闭"] < [clickable=true] -2 < [text="支付宝推荐你"]',
+          ],
+          fastQuery: true,
+          activityIds: ['com.alipay.android.msp.ui.views.MspContainerActivity'],
+          snapshotUrls: ['https://i.gkd.li/i/26985433'],
+          exampleUrls: [
+            'https://e.gkd.li/e54976af-341a-4720-a5c3-0759e7227697',
+          ],
+        },
+      ],
+    },
   ],
 });
