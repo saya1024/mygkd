@@ -70,5 +70,22 @@ export default defineGkdApp({
         },
       ],
     },
+    {
+      name: '[允许通知]弹窗',
+      key: 4,
+      enable: false,
+      rules: [
+        {
+          key: 1,
+          matches: ['[text="打开推送通知"] +2 > @[text="暂不开启"]'],
+          fastQuery: true,
+          activityIds: ['tv.danmaku.bili.MainActivityV2'],
+          snapshotUrls: ['https://i.gkd.li/i/26983388'],
+          exampleUrls: [
+            'https://e.gkd.li/4a5cfe83-0acd-4543-9455-5ecf449799af',
+          ],
+        },
+      ],
+    },
   ],
 });
